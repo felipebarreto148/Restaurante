@@ -1,5 +1,5 @@
 <template>
-  <header class="full-screen h-12">
+  <header class="w-full-screen h-12">
       <h1 class="text-h1-header" v-text="title"></h1>
   </header>
 </template>
