@@ -1,0 +1,37 @@
+@import "../../variables.scss";
+
+
+button[hasImg] {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button[main] {
+    background: #A83A2CB2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 30px;
+    font-family: 'Roboto' sans-serif;
+    font-weight: 400;
+    width: 200px;
+    height: 100px;
+    color: white;
+}
+
+button[variant] {
+    background: #FFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 30px;
+    font-family: 'Roboto' sans-serif;
+    font-weight: 400;
+    width: 200px;
+    height: 100px;
+    color: #A83A2CB2;
+}
