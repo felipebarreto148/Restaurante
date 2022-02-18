@@ -2,7 +2,7 @@
 	<section class="full menuTable">
 		<section class="table w-full">
 			<table class="w-full">
-				<tr class="list-item w-full" v-for="(item, index) in menu" :key="index">
+				<tr class="list-item w-full" v-for="(item, index) in products" :key="index">
 					<section class="d-flex">
 						<td class="item item_index">{{ index | formatIndex }}</td>
 						<td class="item item_infos">
@@ -37,8 +37,6 @@
 <script>
 // Styles
 import '../../scss/components/Tables/menuTable.scss'
-// Mocks
-import menuMock from '../../__mocks__/menu'
 // Utils
 import { Currency } from '../../utils/currency'
 // Components
@@ -46,6 +44,9 @@ import DefaultButton from '../Buttons/DefaultButton.vue'
 // Assets
 import editImage from '../../assets/pencil.png'
 import excludeImage from '../../assets/exclude.png'
+// Store
+import { mapGetters } from "vuex";
+
 export default {
 	name: 'MenuTable',
 	components: {
@@ -53,15 +54,12 @@ export default {
 	},
 	data() {
 		return {
-			menuMock,
 			editImage,
 			excludeImage,
 		}
 	},
 	computed: {
-		menu() {
-			return menuMock
-		},
+		...mapGetters(["products"]),
 	},
 	filters: {
 		formatIndex(value) {
@@ -73,7 +71,7 @@ export default {
 			}
 		},
 		formatToReal(value) {
-			return Currency.toReal(value)
+			return Currency.toReal(parseFloat(value))
 		},
 	},
 }
