@@ -1,7 +1,7 @@
 <template>
 	<section class="defaultInput">
 		<label :for="id">{{ text }} </label>
-		<input :type="type" :name="name" :id="id" :placeholder="placeholder"/>
+		<input :type="type" :name="name" :id="id" :placeholder="placeholder" @input="$emit('inputed', $event.target.value)"/>
 	</section>
 </template>
 
