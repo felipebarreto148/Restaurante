@@ -1,5 +1,5 @@
 <template>
-	<nuxt-link v-if="isLink" :to="link">
+	<nuxt-link :hasImg="hasImg" :main="main" :variant="variant" v-if="isLink" :to="link" tag="button">
 		<img v-if="hasImg" :src="image" :alt="alt" />
 		<span v-else v-html="text" />
 	</nuxt-link>

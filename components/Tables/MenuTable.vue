@@ -30,7 +30,7 @@
 				</tr>
 			</table>
 		</section>
-		<DefaultButton main text="Novo Item" />
+		<DefaultButton main isLink link="/register" text="Novo Item" />
 	</section>
 </template>
 

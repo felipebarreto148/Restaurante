@@ -1,0 +1,21 @@
+.registerProduct {
+	padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+	& .fields {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 80px;
+        row-gap: 20px;
+	}
+
+    & .buttons {
+        height: 100px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 20px;
+    }
+}
