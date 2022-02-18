@@ -10,6 +10,9 @@ export const actions = {
         payload.id = parseInt(getters.getLastId + 1)
 		commit('setProduct', payload)
 	},
+	removeProduct({ commit }, id) {
+		commit('removeProduct', id);
+	}
 }
 
 export const getters = {
