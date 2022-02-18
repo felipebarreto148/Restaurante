@@ -24,6 +24,7 @@
 								hasImg
 								:image="excludeImage"
 								alt="Icone de remover"
+								@clicked="() => removeProduct(item.id)"
 							/>
 						</td>
 					</section>
@@ -45,7 +46,7 @@ import DefaultButton from '../Buttons/DefaultButton.vue'
 import editImage from '../../assets/pencil.png'
 import excludeImage from '../../assets/exclude.png'
 // Store
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
 	name: 'MenuTable',
@@ -74,5 +75,8 @@ export default {
 			return Currency.toReal(parseFloat(value))
 		},
 	},
+	methods: {
+		...mapActions(["removeProduct"])
+	}
 }
 </script>
