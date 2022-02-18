@@ -6,7 +6,7 @@ class Currency {
 	 * @returns {string} Parsed to pt-BR currency
 	 */
 	static toReal(value) {
-		return value.toLocaleString(['pt-BR', 'de-DE', 'en-DK'], {
+		return value.toLocaleString(['pt-BR'], {
 			minimumFractionDigits: 2,
 		})
 	}
