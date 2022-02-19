@@ -7,12 +7,19 @@ export const state = () => ({
 
 export const actions = {
 	newProduct({ commit, getters }, payload) {
-        payload.id = parseInt(getters.getLastId + 1)
+		payload.id = parseInt(getters.getLastId + 1)
 		commit('setProduct', payload)
 	},
 	removeProduct({ commit }, id) {
-		commit('removeProduct', id);
-	}
+		commit('removeProduct', id)
+	},
+	editProduct({ commit }, payload) {
+		commit('editProduct', payload)
+	},
+	getProductById: ({ state }, id) => {
+		const index = state.products.map((item) => item.id).indexOf(parseInt(id))
+		return state.products[index]
+	},
 }
 
 export const getters = {
@@ -20,12 +27,12 @@ export const getters = {
 		return state.products
 	},
 	getLastId: (state) => {
-        const aux = state.products.map((item) => item.id)
-        if (aux.length > 0) {
-            return aux[aux.length - 1]
-        } else {
-            return 1;
-        }
+		const aux = state.products.map((item) => item.id)
+		if (aux.length > 0) {
+			return aux[aux.length - 1]
+		} else {
+			return 1
+		}
 	},
 }
 
@@ -36,5 +43,9 @@ export const mutations = {
 	removeProduct(state, id) {
 		const index = state.products.map((item) => item.id).indexOf(id)
 		state.products.splice(index, 1)
+	},
+	editProduct(state, payload) {
+		const index = state.products.map((item) => item.id).indexOf(payload.id)
+		state.products.splice(index, 1, payload)
 	},
 }
