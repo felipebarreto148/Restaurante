@@ -1,7 +1,7 @@
 <template>
 	<section class="full menuTable">
 		<section class="table w-full">
-			<table class="w-full">
+			<table class="w-full" v-if="hasProducts">
 				<tr
 					class="list-item w-full"
 					v-for="(item, index) in products"
@@ -34,6 +34,10 @@
 					</section>
 				</tr>
 			</table>
+			<h2 v-else class="text-subtitle px-8">
+				Você ainda não possui items no seu cardápio, clique em novo item para
+				começar.
+			</h2>
 		</section>
 		<DefaultButton main isLink link="/register" text="Novo Item" />
 	</section>
@@ -63,6 +67,9 @@ export default {
 	},
 	computed: {
 		...mapGetters(['products']),
+		hasProducts() {
+			return this.products.length > 0
+		},
 	},
 	filters: {
 		formatIndex(value) {
