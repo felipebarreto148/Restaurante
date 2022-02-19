@@ -3,43 +3,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .w-full-screen {
-    width: 100vw;
+	width: 100vw;
 }
 
 .w-full {
-    width: 100%;
+	width: 100%;
 }
 
 .h-full-screen {
-    width: 100vw;
+	width: 100vw;
 }
 
 .h-full {
-    height: 100%;
+	height: 100%;
 }
 
 .full {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .h-12 {
-    height: 12rem;
+	height: 12rem;
 }
 
 .text-h1-header {
-    font-family: 'Sedgwick Ave', cursive;
-    font-weight: 400;
-    font-size: 80px;
+	font-family: 'Sedgwick Ave', cursive;
+	font-weight: 400;
+	font-size: 80px;
 }
 
-.d-flex{
-    display: flex;
+.d-flex {
+	display: flex;
 }

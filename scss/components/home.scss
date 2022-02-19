@@ -1,10 +1,10 @@
-@import "../variables.scss";
+@import '../variables.scss';
 
 .home {
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-    background: $main-bg;
-    display: flex;
-    flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	margin: 0 auto;
+	background: $main-bg;
+	display: flex;
+	flex-direction: column;
 }
