@@ -15,7 +15,7 @@
 						<td class="item item_buttons">
 							<DefaultButton
 								isLink
-								link="/edit"
+								:link="`/edit?id=${item.id}`"
 								hasImg
 								:image="editImage"
 								alt="Icone de editar"
@@ -40,8 +40,6 @@
 import '../../scss/components/Tables/menuTable.scss'
 // Utils
 import { Currency } from '../../utils/currency'
-// Components
-import DefaultButton from '../Buttons/DefaultButton.vue'
 // Assets
 import editImage from '../../assets/pencil.png'
 import excludeImage from '../../assets/exclude.png'
@@ -51,7 +49,7 @@ import { mapGetters, mapActions } from "vuex";
 export default {
 	name: 'MenuTable',
 	components: {
-		DefaultButton,
+		DefaultButton: () => import('../Buttons/DefaultButton.vue'),
 	},
 	data() {
 		return {
