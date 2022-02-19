@@ -1,7 +1,15 @@
 <template>
 	<section class="defaultInput">
 		<label :for="id">{{ text }} </label>
-		<input :type="type" :name="name" :id="id" :placeholder="placeholder" @input="$emit('inputed', $event.target.value)"/>
+		<input
+			:id="id"
+			:type="type"
+			:name="name"
+			:placeholder="placeholder"
+			:disabled="disabled"
+			autocomplete="off"
+			v-model="valueData"
+		/>
 	</section>
 </template>
 
@@ -33,8 +41,25 @@ export default {
 		},
 		placeholder: {
 			type: String,
-			required: true,
 			default: () => 'Título do produto',
+		},
+		disabled: {
+			type: Boolean,
+			default: () => false,
+		},
+		value: {
+			type: [String, Number],
+			default: () => '',
+		},
+	},
+	computed: {
+		valueData: {
+			get() {
+				return this.value
+			},
+			set(value) {
+				this.$emit('inputed', value)
+			},
 		},
 	},
 }
