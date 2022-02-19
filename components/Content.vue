@@ -1,7 +1,7 @@
 <template>
-  <section class="w-full-screen content">
-    <slot />
-  </section>
+	<section class="w-full-screen content">
+		<slot />
+	</section>
 </template>
 
 <script>
@@ -9,6 +9,6 @@
 import '../scss/components/content.scss'
 
 export default {
-    name: "Content"
+	name: 'Content',
 }
 </script>

@@ -2,7 +2,11 @@
 	<section class="full menuTable">
 		<section class="table w-full">
 			<table class="w-full">
-				<tr class="list-item w-full" v-for="(item, index) in products" :key="index">
+				<tr
+					class="list-item w-full"
+					v-for="(item, index) in products"
+					:key="index"
+				>
 					<section class="d-flex">
 						<td class="item item_index">{{ index | formatIndex }}</td>
 						<td class="item item_infos">
@@ -44,7 +48,7 @@ import { Currency } from '../../utils/currency'
 import editImage from '../../assets/pencil.png'
 import excludeImage from '../../assets/exclude.png'
 // Store
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
 	name: 'MenuTable',
@@ -58,7 +62,7 @@ export default {
 		}
 	},
 	computed: {
-		...mapGetters(["products"]),
+		...mapGetters(['products']),
 	},
 	filters: {
 		formatIndex(value) {
@@ -74,7 +78,7 @@ export default {
 		},
 	},
 	methods: {
-		...mapActions(["removeProduct"])
-	}
+		...mapActions(['removeProduct']),
+	},
 }
 </script>

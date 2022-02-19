@@ -2,8 +2,8 @@
 	<main class="home">
 		<Header title="Cardápio" />
 		<Content>
-      <MenuTable />
-    </Content>
+			<MenuTable />
+		</Content>
 	</main>
 </template>
 
@@ -14,9 +14,8 @@ import '../scss/components/home.scss'
 
 export default {
 	name: 'IndexPage',
-  components: {
-    MenuTable: () => import("../components/Tables/MenuTable.vue")
-  }
-
+	components: {
+		MenuTable: () => import('../components/Tables/MenuTable.vue'),
+	},
 }
 </script>
