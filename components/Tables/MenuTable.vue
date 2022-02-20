@@ -10,7 +10,7 @@
 					<section class="d-flex">
 						<td class="item item_index">{{ index | formatIndex }}</td>
 						<td class="item item_infos">
-							<span class="item_title">{{ item.title }}</span>
+							<span class="item_title">{{ item.title | capitalize }}</span>
 							<span class="item_description">{{ item.description }}</span>
 						</td>
 					</section>
@@ -83,6 +83,9 @@ export default {
 		formatToReal(value) {
 			return Currency.toReal(parseFloat(value))
 		},
+		capitalize(value) {
+			return value.charAt(0).toUpperCase() + value.slice(1);
+		}
 	},
 	methods: {
 		...mapActions(['removeProduct']),
