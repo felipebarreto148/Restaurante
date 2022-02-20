@@ -4,8 +4,9 @@ header {
 	justify-content: center;
 
 	h1 {
-		min-width: 716px;
+		width: 716px;
 		letter-spacing: 10pt;
 		text-align: center;
+		flex-wrap: wrap;
 	}
 }

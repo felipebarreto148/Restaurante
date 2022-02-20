@@ -2,11 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+// Variables
+@import './variables.scss';
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	overflow: hidden;
+
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: $menu-title;
+	}
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: $menu-title-opacity;
+	}
 }
 
 .w-full-screen {
@@ -31,13 +53,17 @@
 }
 
 .h-12 {
-	height: 12rem;
+	min-height: 12rem;
 }
 
 .text-h1-header {
 	font-family: 'Sedgwick Ave', cursive;
 	font-weight: 400;
 	font-size: 80px;
+
+	@media (max-width: 600px) {
+		font-size: 50px;
+	}
 }
 
 .text-subtitle {
