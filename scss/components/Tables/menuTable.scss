@@ -13,25 +13,6 @@
 		justify-content: center;
 		max-height: 70%;
 		overflow-y: auto;
-
-		&::-webkit-scrollbar {
-			width: 6px;
-		}
-
-		/* Track */
-		&::-webkit-scrollbar-track {
-			background: #f1f1f1;
-		}
-
-		/* Handle */
-		&::-webkit-scrollbar-thumb {
-			background: $menu-title;
-		}
-
-		/* Handle on hover */
-		&::-webkit-scrollbar-thumb:hover {
-			background: $menu-title-opacity;
-		}
 	}
 }
 
