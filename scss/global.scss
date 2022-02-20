@@ -31,13 +31,17 @@
 }
 
 .h-12 {
-	height: 12rem;
+	min-height: 12rem;
 }
 
 .text-h1-header {
 	font-family: 'Sedgwick Ave', cursive;
 	font-weight: 400;
 	font-size: 80px;
+
+	@media (max-width: 600px){
+		font-size: 50px;
+	}
 }
 
 .text-subtitle {
