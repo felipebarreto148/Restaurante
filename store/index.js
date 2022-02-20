@@ -1,8 +1,8 @@
 // Mocks
-import menuMock from '../__mocks__/menu'
+import { menu } from '../__mocks__/menu'
 
 export const state = () => ({
-	products: [...menuMock],
+	products: [...menu],
 })
 
 export const actions = {
@@ -24,14 +24,21 @@ export const actions = {
 
 export const getters = {
 	products: (state) => {
-		return state.products
+		const producs = [...state.products]
+		return producs.sort((a, b) => {
+			return a.title.toLowerCase() < b.title.toLowerCase()
+				? -1
+				: a.title.toLowerCase() > b.title.toLowerCase()
+				? 1
+				: 0
+		})
 	},
 	getLastId: (state) => {
 		const aux = state.products.map((item) => item.id)
 		if (aux.length > 0) {
 			return aux[aux.length - 1]
 		} else {
-			return 1
+			return 0
 		}
 	},
 }

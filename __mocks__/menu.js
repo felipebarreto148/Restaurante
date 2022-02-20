@@ -1,4 +1,4 @@
-export default [
+const menu = [
 	{
 		id: 1,
 		title: 'Batata Frita',
@@ -24,3 +24,5 @@ export default [
 		price: 5.5,
 	},
 ]
+
+export { menu };
