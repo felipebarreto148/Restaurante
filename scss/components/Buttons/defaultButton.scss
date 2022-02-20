@@ -1,13 +1,13 @@
 @import '../../variables.scss';
 
-button[hasImg] {
+[hasImg] {
 	background: transparent;
 	border: none;
 	outline: none;
 	cursor: pointer;
 }
 
-button[main] {
+[main] {
 	background: #a83a2cb2;
 	border: none;
 	outline: none;
@@ -19,9 +19,13 @@ button[main] {
 	width: 200px;
 	height: 100px;
 	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
 }
 
-button[variant] {
+[variant] {
 	background: #fff;
 	border: none;
 	outline: none;
@@ -33,4 +37,8 @@ button[variant] {
 	width: 200px;
 	height: 100px;
 	color: #a83a2cb2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
 }
