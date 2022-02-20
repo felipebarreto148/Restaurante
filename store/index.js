@@ -38,7 +38,7 @@ export const getters = {
 		if (aux.length > 0) {
 			return aux[aux.length - 1]
 		} else {
-			return 1
+			return 0
 		}
 	},
 }
